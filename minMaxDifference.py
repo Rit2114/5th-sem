@@ -10,16 +10,16 @@ class Solution:
                 a=d
                 seeA=True
                 x+=9*t
-            elif seeA and d==a:
-                x+=9*t
+            elif d!=b:
+                y+=d*t
+            t//=10
             else:
                 x+=d*t
             if not seeB and d!=0:
                 b=d
                 seeB=True
-            elif d!=b:
-                y+=d*t
-            t//=10
+            elif seeA and d==a:
+                x+=9*t
         return x-y
 
   
