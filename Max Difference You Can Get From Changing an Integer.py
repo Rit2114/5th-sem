@@ -15,4 +15,4 @@ class Solution:
                     b=s_num.replace(digit,'0')
                     break
         return int(a)-int(b)
-        0
+        
