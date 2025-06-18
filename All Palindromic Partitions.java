@@ -10,7 +10,15 @@ class Solution {
         if(start == s.length()){
             result.add(new ArrayList<>(current));
             return;
-
+        }
+        
+        for(int end = start + 1; end <= s.length(); end++){
+            String substr = s.substring(start, end);
+            if(isPalindrome(substr)){
+                current.add(substr);
+                backtrack(s, end, current, result);
+                current.remove(current.size() - 1);
+                
             
             }
         }
